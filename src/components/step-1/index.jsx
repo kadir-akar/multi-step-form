@@ -4,16 +4,26 @@ import FormsJSON from "../../form.json";
 
 import * as S from "./styled";
 
-const { step1 } = FormsJSON;
-const hasError = false;
-const Step1 = (props) => {
+const Step1 = ({ onStepSubmit, formData, ...props }) => {
+  const { step1 } = FormsJSON;
+  const hasError = false;
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const formProperties = Object.fromEntries(formData.entries());
+
+    onStepSubmit("step1", "step2", formProperties);
+  };
   return (
-    <Step {...props}>
+    <Step {...props} handleSubmit={onSubmit}>
       <S.Step1>
         {step1.map((item) => (
           <S.FormItem key={item.id} hasError={hasError}>
             <S.Label htmlFor={item.id}>{item.label}</S.Label>
             <S.Input
+              defaultValue={formData.step1[item.id]}
               name={item.id}
               type={item.type}
               placeholder={item.placeholder}

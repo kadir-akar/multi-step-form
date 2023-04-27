@@ -2,16 +2,26 @@ import React from "react";
 
 import * as S from "./styled";
 
-const Step = ({ title, subtitle, hasBackButton, hasNextButton, children }) => {
+const Step = ({
+  onBack,
+  handleSubmit,
+  title,
+  subtitle,
+  hasBackButton,
+  hasNextButton,
+  children,
+}) => {
   return (
-    <S.Step>
+    <S.Step onSubmit={handleSubmit}>
       <S.StepHeader>
         <S.Title>{title}</S.Title>
         <S.Subtitle>{subtitle}</S.Subtitle>
       </S.StepHeader>
       <S.Body>{children}</S.Body>
       <S.StepFooter>
-        {hasBackButton && <S.GoBackButton>Go Back</S.GoBackButton>}
+        {hasBackButton && (
+          <S.GoBackButton onClick={onBack}>Go Back</S.GoBackButton>
+        )}
         {hasNextButton && <S.GoNextButton>Next Step</S.GoNextButton>}
       </S.StepFooter>
     </S.Step>

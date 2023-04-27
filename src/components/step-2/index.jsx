@@ -10,9 +10,11 @@ import { Icons, defaultPlan, defaultBillingType } from "./constants";
 
 const { step2 } = FormJSON;
 
-const Step2 = (props) => {
-  const [plan, setPlan] = useState(defaultPlan);
-  const [billigType, setBillingType] = useState(defaultBillingType);
+const Step2 = ({ onStepSubmit, formData, ...props }) => {
+  const [plan, setPlan] = useState(formData.step2.plan ?? defaultPlan);
+  const [billingType, setBillingType] = useState(
+    formData.step2.billingType ?? defaultBillingType
+  );
 
   const changePlan = (newPlan) => {
     setPlan(newPlan);
@@ -21,12 +23,18 @@ const Step2 = (props) => {
   const changeBilling = (newBillingType) => {
     setBillingType(newBillingType);
   };
+  const onSubmit = (e) => {
+    onStepSubmit("step2", "step3", {
+      billingType,
+      plan,
+    });
+  };
 
   return (
-    <Step {...props}>
+    <Step {...props} handleSubmit={onSubmit}>
       <S.Step2>
         <S.RadioGroup>
-          {step2[billigType].map((item) => (
+          {step2[billingType].map((item) => (
             <S.RadioLabel key={item.id} isSelected={item.id === plan}>
               <S.RadioInput
                 name="plan-type"
@@ -36,7 +44,7 @@ const Step2 = (props) => {
               <S.Icon src={Icons[item.id]} />
               <S.Title>{item.title}</S.Title>
               <S.Subtitle>{item.price}</S.Subtitle>
-              {billigType === "yearly" && (
+              {billingType === "yearly" && (
                 <S.Description>{item.description}</S.Description>
               )}
             </S.RadioLabel>
@@ -46,14 +54,14 @@ const Step2 = (props) => {
           <S.BillingButton
             type="button"
             onClick={() => changeBilling("monthly")}
-            isSelected={billigType === "monthly"}
+            isSelected={billingType === "monthly"}
           >
             Monthly
           </S.BillingButton>
           <S.BillingButton
             type="button"
             onClick={() => changeBilling("yearly")}
-            isSelected={billigType === "yearly"}
+            isSelected={billingType === "yearly"}
           >
             Yearly
           </S.BillingButton>

@@ -39,12 +39,34 @@ const Steps = {
 };
 
 const MultiStepForm = () => {
-  const [activeStep, setActiveStep] = useState("step3");
+  const [formData, setFormData] = useState({
+    step1: {},
+    step2: {},
+    step3: {},
+  });
+  const [activeStep, setActiveStep] = useState("step1");
   const ActiveStep = Steps[activeStep].component;
+
+  const handleStepSubmit = (stepId, nextStepId, stepData) => {
+    setFormData({
+      ...formData,
+      [stepId]: stepData,
+    });
+    setActiveStep(nextStepId);
+  };
+  const handleBack = () => {
+    const currentStepNumber = Number(activeStep.slice(-1));
+    setActiveStep(`step${currentStepNumber - 1}`);
+  };
   return (
     <S.MultiStepForm>
       <Sidebar activeStep={activeStep} />
-      <ActiveStep {...Steps[activeStep]} />
+      <ActiveStep
+        {...Steps[activeStep]}
+        onStepSubmit={handleStepSubmit}
+        formData={formData}
+        onBack={handleBack}
+      />
     </S.MultiStepForm>
   );
 };
