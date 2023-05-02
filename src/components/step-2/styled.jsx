@@ -48,11 +48,15 @@ export const Subtitle = styled.h6`
   font-weight: 400;
   color: var(--cool-gray);
 `;
-
 export const BillingGroup = styled.div`
   display: flex;
+  gap: 12px;
   align-items: center;
-  gap: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  background-color: var(--alabaster);
+  padding: 10px;
 `;
 
 export const Description = styled.p`
@@ -62,14 +66,10 @@ export const Description = styled.p`
 
 export const BillingButton = styled.button`
   background-color: var(--alabester);
-  border: 1px solid var(--light-gray);
-  padding: 12px;
-  border-radius: 6px;
   ${({ isSelected }) =>
     isSelected &&
     `
+    font-weight: 700;
     color: var(--prussian-blue);
-    background-color: var(--alabaster);
-    border-color: var(--purplish-blue);
   `}
 `;

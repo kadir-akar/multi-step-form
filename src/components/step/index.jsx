@@ -22,7 +22,11 @@ const Step = ({
         {hasBackButton && (
           <S.GoBackButton onClick={onBack}>Go Back</S.GoBackButton>
         )}
-        {hasNextButton && <S.GoNextButton>Next Step</S.GoNextButton>}
+        {hasNextButton ? (
+          <S.GoNextButton>Next Step</S.GoNextButton>
+        ) : (
+          <S.GoNextButton type="submit">Confirm</S.GoNextButton>
+        )}
       </S.StepFooter>
     </S.Step>
   );

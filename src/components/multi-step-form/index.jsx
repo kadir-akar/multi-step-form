@@ -53,6 +53,7 @@ const MultiStepForm = () => {
       [stepId]: stepData,
     });
     setActiveStep(nextStepId);
+    console.log(formData);
   };
   const handleBack = () => {
     const currentStepNumber = Number(activeStep.slice(-1));

@@ -1,10 +1,10 @@
 import React from "react";
 import Step from "../step";
 import FormJSON from "../../form.json";
-
 import { useState } from "react";
 
 import * as S from "./styled";
+import "./toggle.css";
 
 import { Icons, defaultPlan, defaultBillingType } from "./constants";
 
@@ -19,15 +19,15 @@ const Step2 = ({ onStepSubmit, formData, ...props }) => {
   const changePlan = (newPlan) => {
     setPlan(newPlan);
   };
-
-  const changeBilling = (newBillingType) => {
-    setBillingType(newBillingType);
+  const Changetoggle = () => {
+    if (billingType === "monthly") {
+      setBillingType("yearly");
+    } else {
+      setBillingType("monthly");
+    }
   };
   const onSubmit = (e) => {
-    onStepSubmit("step2", "step3", {
-      billingType,
-      plan,
-    });
+    onStepSubmit("step2", "step3", { billingType, plan });
   };
 
   return (
@@ -50,19 +50,16 @@ const Step2 = ({ onStepSubmit, formData, ...props }) => {
             </S.RadioLabel>
           ))}
         </S.RadioGroup>
+
         <S.BillingGroup>
-          <S.BillingButton
-            type="button"
-            onClick={() => changeBilling("monthly")}
-            isSelected={billingType === "monthly"}
-          >
+          <S.BillingButton type="button" isSelected={billingType === "monthly"}>
             Monthly
           </S.BillingButton>
-          <S.BillingButton
-            type="button"
-            onClick={() => changeBilling("yearly")}
-            isSelected={billingType === "yearly"}
-          >
+          <label className="switch" onChange={Changetoggle}>
+            <input type="checkbox" />
+            <span className="slider round"></span>
+          </label>
+          <S.BillingButton type="button" isSelected={billingType === "yearly"}>
             Yearly
           </S.BillingButton>
         </S.BillingGroup>

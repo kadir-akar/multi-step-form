@@ -6,7 +6,8 @@ export const MultiStepForm = styled.div`
   gap: 20px;
   background-color: var(--white);
   border-radius: 15px;
-  min-height: 65vh;
-  min-width: 90vw;
+  min-height: 70vh;
+  min-width: 52vw;
+  max-width: 65vw;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 `;
