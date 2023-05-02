@@ -35,11 +35,11 @@ const Step2 = ({ onStepSubmit, formData, ...props }) => {
       <S.Step2>
         <S.RadioGroup>
           {step2[billingType].map((item) => (
-            <S.RadioLabel key={item.id} isSelected={item.id === plan}>
+            <S.RadioLabel key={item.id} isSelected={item.id === plan.id}>
               <S.RadioInput
                 name="plan-type"
                 type="radio"
-                onChange={() => changePlan(item.id)}
+                onChange={() => changePlan(item)}
               />
               <S.Icon src={Icons[item.id]} />
               <S.Title>{item.title}</S.Title>
@@ -56,7 +56,7 @@ const Step2 = ({ onStepSubmit, formData, ...props }) => {
             Monthly
           </S.BillingButton>
           <label className="switch" onChange={Changetoggle}>
-            <input type="checkbox" />
+            <input type="checkbox" defaultChecked={billingType === "yearly"} />
             <span className="slider round"></span>
           </label>
           <S.BillingButton type="button" isSelected={billingType === "yearly"}>

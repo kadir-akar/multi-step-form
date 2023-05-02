@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Step2 = styled.div`
   display: flex;
@@ -23,9 +23,9 @@ export const RadioLabel = styled.label`
   ${({ isSelected }) =>
     isSelected &&
     `
-    background-color: var(--alabaster);
-    border-color: var(--purplish-blue);
-  `}
+      background-color: var(--alabaster);
+      border-color: var(--purplish-blue);
+    `}
 
   &:hover {
     border-color: 1px solid var(--primary);

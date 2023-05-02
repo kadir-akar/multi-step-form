@@ -9,7 +9,7 @@ const Step4 = ({ formData, ...props }) => {
       <S.Step4>
         <S.MainRow>
           <S.Title>
-            {formData.step2.plan} ({formData.step2.billingType})
+            {formData.step2} ({formData.step2.billingType})
           </S.Title>
           <S.Price>Price</S.Price>
         </S.MainRow>
