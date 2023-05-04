@@ -3,12 +3,16 @@ import Step from "../step";
 
 import * as S from "./styled";
 
-function Step4({ formData, ...props }) {
+function Step4({ onStepSubmit, formData, ...props }) {
   const { billingType, plan } = formData.step2;
   const { selectedAddons } = formData.step3;
-
+  const onSubmit = () => {
+    onStepSubmit("step4", "step5", {
+      selectedAddons,
+    });
+  };
   return (
-    <Step {...props}>
+    <Step {...props} handleSubmit={onSubmit}>
       <S.Step4>
         <S.MainRow>
           <S.Title>

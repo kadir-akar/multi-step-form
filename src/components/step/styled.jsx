@@ -5,7 +5,7 @@ export const Step = styled.form`
   display: flex;
   flex-direction: column;
   gap: 34px;
-  padding: 40px 40px 20px 40px;
+  padding: 40px 40px 20px 60px;
 `;
 
 export const StepHeader = styled.div``;

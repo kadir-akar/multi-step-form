@@ -10,7 +10,7 @@ export const SidebarContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 24px;
+  padding: 40px;
   color: var(--white);
   width: 30%;
   border-radius: 8px;
