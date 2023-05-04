@@ -10,8 +10,12 @@ export const RadioGroup = styled.div`
   width: 100%;
   display: flex;
   gap: 12px;
+  @media (max-width: 1068px) {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
 `;
-
 export const RadioLabel = styled.label`
   margin-top: 20px;
   height: 100%;
@@ -30,6 +34,13 @@ export const RadioLabel = styled.label`
   &:hover {
     border-color: 1px solid var(--primary);
   }
+  @media (max-width: 1068px) {
+    display: flex;
+    gap: 12px;
+    height: 10%;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 export const RadioInput = styled.input`
@@ -38,6 +49,10 @@ export const RadioInput = styled.input`
 
 export const Icon = styled.img`
   margin-bottom: 32px;
+  @media (max-width: 1068px) {
+    margin: 0;
+    margin-right: 12px;
+  }
 `;
 
 export const Title = styled.h3`

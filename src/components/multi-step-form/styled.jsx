@@ -10,4 +10,9 @@ export const MultiStepForm = styled.div`
   min-width: 52vw;
   max-width: 65vw;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  @media (max-width: 1068px) {
+    min-width: 95vw;
+    position: relative;
+    margin-top: -70px;
+  }
 `;

@@ -21,3 +21,8 @@ body {
   line-height: 1.25;
   color: var(--marine-blue);
 }
+@media screen and (max-width: 1068px) {
+  body {
+    font-size: 18px;
+  }
+}

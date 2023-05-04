@@ -6,6 +6,9 @@ export const Step = styled.form`
   flex-direction: column;
   gap: 34px;
   padding: 40px 40px 20px 60px;
+  @media (max-width: 1068px) {
+    padding: 20px;
+  }
 `;
 
 export const StepHeader = styled.div``;
@@ -27,6 +30,14 @@ export const StepFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 1068px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: var(--white);
+  }
 `;
 
 export const GoBackButton = styled.button`
