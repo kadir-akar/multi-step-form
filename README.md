@@ -6,7 +6,7 @@ This project is a multi-step form built using React and styled-components. The f
 
 ![ezgif-4-437ae9400b](https://user-images.githubusercontent.com/73611059/236548386-16286d11-622a-49ec-981a-07f54b234122.gif)
 
-## screenshots
+## Screenshots
 
 | Mobile layout                                                                       | Desktop layout                                                                        |
 | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
