@@ -1,7 +1,3 @@
-# multi-step-form
-
-multi step form with React and styled components
-
 # Multi-step-form
 
 This project is a multi-step form built using React and styled-components. The form prompts the user to answer questions in multiple steps and presents a "Next" button to move on to the next step. In the final step, all the entered information is summarized and the form is submitted.
