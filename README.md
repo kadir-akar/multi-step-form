@@ -10,8 +10,7 @@ This project is a multi-step form built using React and styled-components. The f
 
 | Mobile layout                                                                       | Desktop layout                                                                        |
 | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| ![Vite + React - Google Chrome 5 05 2023 21_59_27](https://user-images.githubusercontent.com/73611059/236546215-bd6efb5c-776f-4023-a3b0-104ba5b8bc02.png)| ![Vite + React - Google Chrome 5 05 2023 21_58_16](https://user-images.githubusercontent.com/73611059/236546639-08e6bc53-3061-4ad6-a2a9-fdd46f2ca7cd.png)
-|
+| ![Vite + React - Google Chrome 5 05 2023 21_59_27](https://user-images.githubusercontent.com/73611059/236546215-bd6efb5c-776f-4023-a3b0-104ba5b8bc02.png)| ![Vite + React - Google Chrome 5 05 2023 21_58_16](https://user-images.githubusercontent.com/73611059/236546639-08e6bc53-3061-4ad6-a2a9-fdd46f2ca7cd.png)|
 
 
 ## Technologies Used
