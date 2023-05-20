@@ -22,13 +22,13 @@ This project was built using:
 
 ## Installation
 
-  Clone the repository: git clone
-  Install dependencies: npm install
-  Start the development server: npm start
+    Clone the repository: git clone
+    Install dependencies: npm install
+    Start the development server: npm start
 ## Usage
-  Open the form in a web browser.
-  Answer the questions in each step and click the "Next" button to move on to the next step.
-  Review the entered information in the final step and click the "Submit" button to submit the form.
+    Open the form in a web browser.
+    Answer the questions in each step and click the "Next" button to move on to the next step.
+    Review the entered information in the final step and click the "Submit" button to submit the form.
     
 ## License
  This project is licensed under the MIT License. 
