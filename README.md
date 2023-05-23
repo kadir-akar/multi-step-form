@@ -22,9 +22,7 @@ This project was built using:
 
 ## Installation
 
-    Clone the repository: git clone
-    Install dependencies: npm install
-    Start the development server: npm start
+ Clone this repository to your local machine. Navigate to the project directory in your terminal. Run npm install to install the necessary dependencies.
 ## Usage
     Open the form in a web browser.
     Answer the questions in each step and click the "Next" button to move on to the next step.
