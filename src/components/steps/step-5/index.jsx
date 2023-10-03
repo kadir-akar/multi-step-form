@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./styled";
 import Step from "../step";
-import ThankYou from "../../assets/images/icon-thank-you.svg";
+import ThankYou from "../../../assets/images/icon-thank-you.svg";
 
 const Step5 = () => {
   return (

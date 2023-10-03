@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import FormJSON from "../../form.json";
+import FormJSON from "../../../form.json";
 import Step from "../step";
 
 import * as S from "./styled";
